@@ -1,4 +1,3 @@
-/* Global Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -37,19 +36,10 @@ header nav ul li a:hover {
   text-decoration: underline;  /* Fügt eine Unterstreichung hinzu, wenn der Benutzer über den Link fährt */
   color: #ffffff;  /* Optional: Ändert die Farbe des Links beim Hover */
 }
-
-/* Main content styling */
-.banner {
-  width: 100%; /* Über die gesamte Breite */
-  height: 8; /* Höhe von 7 cm */
-  margin-top: 0,5cm; /* Abstand von 1 cm zum Header */
-  overflow: hidden;
-}
-
-.banner img {
-  width: 100%; /* Das Bild wird auf die gesamte Breite gestreckt */
-  height: 8cm; /* Die Höhe des Bildes wird auf 5 cm angepasst */
-  object-fit: cover; /* Das Bild wird skaliert, um den Bereich abzudecken, ohne die Proportionen zu verzerren */
+.video-fixed-size {
+  width: 100%;  /* Feste Breite */
+  height: 480px; /* Feste Höhe */
+  margin: 0 auto; /* Zentriert das Video */
 }
 main {
   padding: 2rem;
