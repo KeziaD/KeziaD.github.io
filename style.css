@@ -132,3 +132,61 @@ footer {
 .footer-content .right {
   text-align: right;
 }
+/* Grundlegende Stile */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+/* Bildcontainer */
+#projektseite {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Untere Hälfte des Bildschirms */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+/* Container für Bilder */
+.bild-container {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  animation: bewegung 10s infinite linear;
+}
+
+/* Bild-Stile */
+.bild {
+  height: 5cm;
+  width: 3.5cm;
+  object-fit: cover;
+  position: relative;
+  margin-left: -30px; /* Leichtes Überlappen */
+  transform: rotate(-10deg); /* Schräg anordnen */
+}
+
+/* Animation: Bilder von links nach rechts bewegen */
+@keyframes bewegung {
+  0% {
+      transform: translateX(-100%); /* Startpunkt (außerhalb des Bildschirms) */
+  }
+  100% {
+      transform: translateX(100%); /* Endpunkt (außerhalb des Bildschirms rechts) */
+  }
+}
