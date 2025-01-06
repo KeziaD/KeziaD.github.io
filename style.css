@@ -33,12 +33,14 @@ header nav ul li a:hover {
   color: #8ded9f;
  }
  header nav ul li a:hover {
-  text-decoration: underline;  /* Fügt eine Unterstreichung hinzu, wenn der Benutzer über den Link fährt */
-  color: #ffffff;  /* Optional: Ändert die Farbe des Links beim Hover */
+  text-decoration: underline;  
+  color: #ffffff; 
 }
 .video-fixed-size {
   width: 100%;  /* Feste Breite */
   height: 480px; /* Feste Höhe */
+  overflow: visible; /* Overflow zulassen, damit das Video auch über den Bereich hinaus sichtbar ist */
+  position: relative;
   margin: 0 auto; /* Zentriert das Video */
 }
 main {
@@ -74,7 +76,6 @@ section .btn:hover {
   background-color: #f395fa;
 }
 
-/* Hero section */
 .hero {
   text-align: center;
   padding: 4rem 1rem;
@@ -86,7 +87,6 @@ section .btn:hover {
   text-align: center;
 }
 
-/* Projects Section */
 .projects .project {
   background-color: white;
   padding: 10rem;
@@ -121,15 +121,14 @@ footer {
   flex: 1;  /* Alle drei Spalten haben gleichen Platz */
 }
 
-/* Stile für den Text */
 .footer-content .left {
-  text-align: left;  /* Linksbündiger Text */
+  text-align: left; 
 }
 
 .footer-content .center {
-  text-align: center;  /* Zentrierter Text */
+  text-align: center; 
 }
 
 .footer-content .right {
-  text-align: right;  /* Rechtsbündiger Text */
+  text-align: right;
 }
