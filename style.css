@@ -86,6 +86,12 @@ section .btn:hover {
 .intro, .cta {
   text-align: center;
 }
+/* Stile für die Startseite */
+#home {
+  padding: 20px;
+  background-color: #f3e5f5;
+  text-align: center;
+}
 
 .projects .project {
   background-color: white;
@@ -100,54 +106,6 @@ section .btn:hover {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
-
-footer {
-  background-color: #b1b1b1;
-  color: white;
-  padding: 10px 0;
-  margin-top: auto;  /* Stellt sicher, dass der Footer immer unten bleibt */
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between; /* Verteilt die Inhalte gleichmäßig */
-  align-items: center;  /* Vertikale Zentrierung */
-  padding: 0 20px; /* Abstand zu den Seiten */
-}
-
-.footer-content .left,
-.footer-content .center,
-.footer-content .right {
-  flex: 1;  /* Alle drei Spalten haben gleichen Platz */
-}
-
-.footer-content .left {
-  text-align: left; 
-}
-
-.footer-content .center {
-  text-align: center; 
-}
-
-.footer-content .right {
-  text-align: right;
-}
-/* Grundlegende Stile */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f4f4f4;
-}
-
 /* Allgemeine Stile für die Projektseite */
 #projects {
   position: relative;
@@ -211,14 +169,56 @@ body {
   }
 }
 
-/* Stile für die Startseite */
-#home {
-  padding: 20px;
-  background-color: #f3e5f5;
-  text-align: center;
-}
-
 footer {
   text-align: center;
   margin-top: 20px;
 }
+
+
+footer {
+  background-color: #b1b1b1;
+  color: white;
+  padding: 10px 0;
+  margin-top: auto;  /* Stellt sicher, dass der Footer immer unten bleibt */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between; /* Verteilt die Inhalte gleichmäßig */
+  align-items: center;  /* Vertikale Zentrierung */
+  padding: 0 20px; /* Abstand zu den Seiten */
+}
+
+.footer-content .left,
+.footer-content .center,
+.footer-content .right {
+  flex: 1;  /* Alle drei Spalten haben gleichen Platz */
+}
+
+.footer-content .left {
+  text-align: left; 
+}
+
+.footer-content .center {
+  text-align: center; 
+}
+
+.footer-content .right {
+  text-align: right;
+}
+/* Grundlegende Stile */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
