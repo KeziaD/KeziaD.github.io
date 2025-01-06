@@ -148,8 +148,8 @@ body {
   background-color: #f4f4f4;
 }
 
-/* Bildcontainer */
-#projektseite {
+/* Allgemeine Stile für die Projektseite */
+#projects {
   position: relative;
   width: 100%;
   height: 50vh; /* Untere Hälfte des Bildschirms */
@@ -159,7 +159,7 @@ body {
   overflow: hidden;
 }
 
-/* Container für Bilder */
+/* Bildcontainer */
 .bild-container {
   position: absolute;
   bottom: 0;
@@ -173,12 +173,32 @@ body {
 
 /* Bild-Stile */
 .bild {
-  height: 5cm;
-  width: 3.5cm;
+  height: 7cm;
+  width: 5cm;
   object-fit: cover;
   position: relative;
   margin-left: -30px; /* Leichtes Überlappen */
-  transform: rotate(-10deg); /* Schräg anordnen */
+}
+
+/* Verschiedene Ausrichtungen der Bilder */
+.bild:nth-child(1) {
+  transform: rotate(-10deg); /* Bild 1 schräg nach links */
+}
+
+.bild:nth-child(2) {
+  transform: rotate(15deg); /* Bild 2 schräg nach rechts */
+}
+
+.bild:nth-child(3) {
+  transform: rotate(0deg); /* Bild 3 gerade */
+}
+
+.bild:nth-child(4) {
+  transform: rotate(-5deg); /* Bild 4 schräg nach links */
+}
+
+.bild:nth-child(5) {
+  transform: rotate(10deg); /* Bild 5 schräg nach rechts */
 }
 
 /* Animation: Bilder von links nach rechts bewegen */
@@ -189,4 +209,16 @@ body {
   100% {
       transform: translateX(100%); /* Endpunkt (außerhalb des Bildschirms rechts) */
   }
+}
+
+/* Stile für die Startseite */
+#home {
+  padding: 20px;
+  background-color: #f3e5f5;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
 }
