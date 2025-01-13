@@ -117,7 +117,7 @@ section .btn:hover {
 .hero {
   text-align: center;
   padding: 4rem 1rem;
-  background-color: #c7dbe2;
+  background-color: white;
   color: white;
 }
 
@@ -136,7 +136,7 @@ section .btn:hover {
 #projects {
   position: relative;
   width: 100%;
-  height: 35vh; /* Obere Hälfte des Bildschirms */
+  height: 90vh; /* Obere Hälfte des Bildschirms */
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -155,7 +155,7 @@ section .btn:hover {
   justify-content: space-evenly;
   width: 100%;
   height: 100%;
-  animation: bewegung 50s infinite linear;
+  animation: bewegung 40s linear infinite;
 }
 
 /* Bild-Stile */
@@ -164,7 +164,7 @@ section .btn:hover {
   width: 5cm;
   object-fit: cover;
   position: relative;
-  margin-left: -30px; /* Leichtes Überlappen */
+  margin-left: -10px; /* Leichtes Überlappen */
 }
 
 /* Verschiedene Ausrichtungen der Bilder */
@@ -187,11 +187,30 @@ section .btn:hover {
 .bild:nth-child(5) {
   transform: rotate(10deg); /* Bild 5 schräg nach rechts */
 }
+.bild:nth-child(6) {
+  transform: rotate(-10deg); /* Bild 6 schräg nach links */
+}
+
+.bild:nth-child(7) {
+  transform: rotate(15deg); /* Bild 7 schräg nach rechts */
+}
+
+.bild:nth-child(8) {
+  transform: rotate(0deg); /* Bild 8 gerade */
+}
+
+.bild:nth-child(9) {
+  transform: rotate(-5deg); /* Bild 9 schräg nach links */
+}
+
+.bild:nth-child(10) {
+  transform: rotate(10deg); /* Bild 10 schräg nach rechts */
+}
 
 /* Animation: Bilder von links nach rechts bewegen */
 @keyframes bewegung {
   0% {
-      transform: translateX(-100%); /* Startpunkt (außerhalb des Bildschirms) */
+      transform: translateX(0); /* Startpunkt (außerhalb des Bildschirms) */
   }
   100% {
       transform: translateX(100%); /* Endpunkt (außerhalb des Bildschirms rechts) */
