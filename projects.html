@@ -5,15 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kezia's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+
+    <style>
+        /* Basic reset and styling */
+        body, html {
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          font-family: Arial, sans-serif;
+        }
+    
+        .banner-container {
+          position: relative;
+          width: 100vw; /* Full width of the viewport */
+          height: 300px; /* Set a fixed height for the banner */
+          overflow: hidden; /* Hide overflowing images */
+        }
+    
+        .image-wrapper {
+          display: flex;
+          width: calc(100vw * 5); /* Set width based on number of images (5 images * 100% of viewport) */
+          animation: moveImages 20s linear infinite;
+        }
+    
+        .image-wrapper img {
+          width: 20vw; /* Each image takes up 20% of the viewport width */
+          height: 100%; /* Keep the images fully stretched to fit the height */
+          object-fit: cover; /* Ensure images cover the area */
+        }
+    
+        /* Infinite scroll animation */
+        @keyframes moveImages {
+          0% {
+            transform: translateX(0); /* Start at the initial position */
+          }
+          100% {
+            transform: translateX(-100%); /* Move images to the left */
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <!-- The container that holds the scrolling banner -->
+      <div class="banner-container">
+        <div class="image-wrapper">
+          <!-- The five images for the gallery -->
+          <img src="https://via.placeholder.com/500x300/FF5733/FFFFFF?text=Image+1" alt="Image 1">
+          <img src="https://via.placeholder.com/500x300/33CFFF/FFFFFF?text=Image+2" alt="Image 2">
+          <img src="https://via.placeholder.com/500x300/FFC300/FFFFFF?text=Image+3" alt="Image 3">
+          <img src="https://via.placeholder.com/500x300/DAF7A6/FFFFFF?text=Image+4" alt="Image 4">
+          <img src="https://via.placeholder.com/500x300/C70039/FFFFFF?text=Image+5" alt="Image 5">
+    
+          <!-- Duplicate the images to create the seamless loop effect -->
+          <img src="https://via.placeholder.com/500x300/FF5733/FFFFFF?text=Image+1" alt="Image 1">
+          <img src="https://via.placeholder.com/500x300/33CFFF/FFFFFF?text=Image+2" alt="Image 2">
+          <img src="https://via.placeholder.com/500x300/FFC300/FFFFFF?text=Image+3" alt="Image 3">
+          <img src="https://via.placeholder.com/500x300/DAF7A6/FFFFFF?text=Image+4" alt="Image 4">
+          <img src="https://via.placeholder.com/500x300/C70039/FFFFFF?text=Image+5" alt="Image 5">
+        </div>
+      </div>
+    
+      <script>
+        // No JS needed for this fix, the CSS handles the infinite loop.
+      </script>
+    </body>
+    
+</html>
+
+
+
+<!-- <body>
     <section id="projects">
         <div class="bild-container">
-            <img src="bild1.jpg" alt="Bild 1" class="bild">
-            <img src="bild2.jpg" alt="Bild 2" class="bild">
-            <img src="bild3.jpg" alt="Bild 3" class="bild">
-            <img src="bild4.jpg" alt="Bild 4" class="bild">
-            <img src="bild5.jpg" alt="Bild 5" class="bild">
+            <img src="assets/Perlenkette_Model.jpeg" alt="Bild 1" class="bild">
+            <img src="assets/Pearl necklace .JPG" alt="Bild 2" class="bild">
+            <img src="assets/Perlenkette production.JPG" alt="Bild 3" class="bild">
+            <img src="assets/Barockperlenkette.JPG" alt="Bild 4" class="bild">
+            <img src="assets/Perlenringe.JPG" alt="Bild 5" class="bild">
             <img src="bild6.jpg" alt="Bild 1" class="bild">
             <img src="bild7.jpg" alt="Bild 2" class="bild">
             <img src="bild8.jpg" alt="Bild 3" class="bild">
@@ -31,8 +99,8 @@
             <img src="bild10.jpg" alt="Bild 10">
           </div>
         </div>
+        <script src="script.js"></script>
     </section>
+
     
-    
-</body>
-</html>
+</body> -->
