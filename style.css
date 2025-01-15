@@ -137,7 +137,7 @@ section .btn:hover {
 #projects {
   position: relative;
   width: 100%;
-  height: 55vh; /* Obere Hälfte des Bildschirms */
+  height: 100vh; /* Obere Hälfte des Bildschirms */
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -152,6 +152,7 @@ section .btn:hover {
   position: absolute;
   bottom: 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-evenly;
   width: 100%;
@@ -166,6 +167,11 @@ section .btn:hover {
   object-fit: cover;
   position: relative;
   margin-left: -10px; /* Leichtes Überlappen */
+}
+/* Hover-Effekt für Bilder */
+.bild:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Verschiedene Ausrichtungen der Bilder */
@@ -209,7 +215,7 @@ section .btn:hover {
 }
 
 /* Animation: Bilder von links nach rechts bewegen */
-@keyframes bewegung {
+@keyframes endless-scroll {
   0% {
       transform: translateX(0); /* Startpunkt (außerhalb des Bildschirms) */
   }
@@ -217,7 +223,10 @@ section .btn:hover {
       transform: translateX(100%); /* Endpunkt (außerhalb des Bildschirms rechts) */
   }
 }
-
+/* Anwendung der Animation */
+.bild-container {
+  animation: endless-scroll 30s linear infinite; /* Die Bilder bewegen sich kontinuierlich von rechts nach links */
+}
 
 
 
@@ -331,6 +340,10 @@ footer p {
   margin: 0;
   font-size: 0rem;
 }
-
+.poppins-regular {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 
