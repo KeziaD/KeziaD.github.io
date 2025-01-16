@@ -219,8 +219,8 @@ section .btn:hover {
   0% {
       transform: translateX(0); /* Startpunkt (außerhalb des Bildschirms) */
   }
-  100% {
-      transform: translateX(100%); /* Endpunkt (außerhalb des Bildschirms rechts) */
+  10% {
+      transform: translateX(10%); /* Endpunkt (außerhalb des Bildschirms rechts) */
   }
 }
 /* Anwendung der Animation */
