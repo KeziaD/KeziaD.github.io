@@ -262,13 +262,58 @@ header nav ul li a:hover, footer a:hover {
 .bild:nth-child(10) {
   transform: rotate(10deg); /* Bild 10 schräg nach rechts */
 }
+/* Hover-Effekt für Bilder */
+.bild:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Verschiedene Ausrichtungen der Bilder */
+.bild:nth-child(1) {
+  transform: rotate(-10deg); /* Bild 1 schräg nach links */
+}
+
+.bild:nth-child(2) {
+  transform: rotate(15deg); /* Bild 2 schräg nach rechts */
+}
+
+.bild:nth-child(3) {
+  transform: rotate(0deg); /* Bild 3 gerade */
+}
+
+.bild:nth-child(4) {
+  transform: rotate(-5deg); /* Bild 4 schräg nach links */
+}
+
+.bild:nth-child(5) {
+  transform: rotate(10deg); /* Bild 5 schräg nach rechts */
+}
+.bild:nth-child(6) {
+  transform: rotate(-10deg); /* Bild 6 schräg nach links */
+}
+
+.bild:nth-child(7) {
+  transform: rotate(15deg); /* Bild 7 schräg nach rechts */
+}
+
+.bild:nth-child(8) {
+  transform: rotate(0deg); /* Bild 8 gerade */
+}
+
+.bild:nth-child(9) {
+  transform: rotate(-5deg); /* Bild 9 schräg nach links */
+}
+
+.bild:nth-child(10) {
+  transform: rotate(10deg); /* Bild 10 schräg nach rechts */
+}
 
 /* Animation: Bilder von links nach rechts bewegen */
 @keyframes endless-scroll {
 from {
       transform: translateX(0); /* Startpunkt (außerhalb des Bildschirms) */
   }
-  to {
+  to{
       transform: translateX(-100%); /* Endpunkt (außerhalb des Bildschirms rechts) */
   }
 }
