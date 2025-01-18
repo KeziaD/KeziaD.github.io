@@ -317,6 +317,10 @@ from {
       transform: translateX(-100%); /* Endpunkt (außerhalb des Bildschirms rechts) */
   }
 }
+@keyframes loop {
+  0% {transform: translateX(0%);}
+  100% {transform: translateX(-50%);}
+}
 /* Anwendung der Animation */
 .bild-container {
   animation: endless-scroll 40s linear infinite; /* Die Bilder bewegen sich kontinuierlich von rechts nach links */
