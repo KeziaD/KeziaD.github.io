@@ -1,11 +1,8 @@
 body {
-  background: #f2f2f2
+  background-color: #f2f2f2
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
-
   font-family: Arial, sans-serif;
   /* display: flex; */
   /* justify-content: center;
@@ -49,7 +46,7 @@ header nav ul li a, footer a {
 }
 
 header nav ul li a:hover {
-  color: #8ded9f;
+  color: white;
  }
 
 header nav ul li a:hover, footer a:hover {
@@ -64,7 +61,7 @@ header nav ul li a:hover, footer a:hover {
   height: 30vh;
   /* margin: 0; */
   margin-top: 41px;
-  background-color: #f395fa;
+  background-color: #ffffff;
   object-fit: contain;
 }
 
@@ -88,14 +85,97 @@ main {
   /* max-width: 1100px; */
   margin: 0 auto;
 }
-h1, h2 {
+h1 {
   font-size: 2.5rem; 
   color: #b1b1b1;
+  margin-top: 3rem;
+  margin-bottom: 20rem;
+}
+/* Bildcontainer */
+.bild-container {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+ margin: 0;
 }
 
+
+/* Bild-Stile */
+.bild {
+  height: 7cm;
+  width: 5cm;
+  object-fit: cover;
+  position: relative;
+  margin-left: -10px; /* Leichtes Überlappen */
+  margin-right: -10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+/* Hover-Effekt für Bilder */
+.bild:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Verschiedene Ausrichtungen der Bilder */
+.bild:nth-child(1) {
+  transform: rotate(-10deg); /* Bild 1 schräg nach links */
+}
+
+.bild:nth-child(2) {
+  transform: rotate(15deg); /* Bild 2 schräg nach rechts */
+}
+
+.bild:nth-child(3) {
+  transform: rotate(0deg); /* Bild 3 gerade */
+}
+
+.bild:nth-child(4) {
+  transform: rotate(-5deg); /* Bild 4 schräg nach links */
+}
+
+.bild:nth-child(5) {
+  transform: rotate(10deg); /* Bild 5 schräg nach rechts */
+}
+.bild:nth-child(6) {
+  transform: rotate(-10deg); /* Bild 6 schräg nach links */
+}
+
+.bild:nth-child(7) {
+  transform: rotate(15deg); /* Bild 7 schräg nach rechts */
+}
+
+.bild:nth-child(8) {
+  transform: rotate(0deg); /* Bild 8 gerade */
+}
+
+
+
+
 h2 {
+  font-size: 2.5rem; 
   margin-top: 1.5rem;
   font-size: 2rem;
+  margin-bottom: 20rem;
+}
+h2, h3 {
+  display: block;      /* Sicherstellen, dass sie als Block-Elemente angezeigt werden */
+  visibility: visible; /* Sicherstellen, dass sie sichtbar sind */
+  color: #b1b1b1;         /* Textfarbe sicherstellen */
+  margin-top: 1.5rem;  /* Abstand oben, wenn nötig */
+}
+h3 {
+  font-size: 2.5rem; 
+  margin-top: 5rem;
+  font-size: 2rem;
+  margin-bottom: 5rem;
 }
 
 section {
@@ -106,14 +186,14 @@ section .btn {
   display: inline-block;
   margin-top: 1rem;
   padding: 10px 20px;
-  background-color: #f395fa;
+  background-color: #73a05b;
   color: white;
   text-decoration: none;
   border-radius: 5px;
 }
 
 section .btn:hover {
-  background-color: #f395fa;
+  background-color: #73a05b;
 }
 
 .hero {
@@ -126,6 +206,11 @@ section .btn:hover {
 .intro, .cta {
   text-align: center;
 }
+.services, .featured-projects {
+  background-color: #f2f2f2;  /* Setzt den Hintergrund auf #f2f2f2 für die Services- und Featured Projects-Sektion */
+  padding: 40px;  /* Optional: Padding hinzu, um den Inhalt etwas einzurücken */
+}
+
 
 /* Stile für die Startseite */
 
@@ -268,46 +353,49 @@ header nav ul li a:hover, footer a:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Verschiedene Ausrichtungen der Bilder */
-.bild:nth-child(1) {
+.bild:nth-child(11) {
   transform: rotate(-10deg); /* Bild 1 schräg nach links */
 }
 
-.bild:nth-child(2) {
+.bild:nth-child(12) {
   transform: rotate(15deg); /* Bild 2 schräg nach rechts */
 }
 
-.bild:nth-child(3) {
+.bild:nth-child(13) {
   transform: rotate(0deg); /* Bild 3 gerade */
 }
 
-.bild:nth-child(4) {
+.bild:nth-child(14) {
   transform: rotate(-5deg); /* Bild 4 schräg nach links */
 }
 
-.bild:nth-child(5) {
+.bild:nth-child(15) {
   transform: rotate(10deg); /* Bild 5 schräg nach rechts */
 }
-.bild:nth-child(6) {
+.bild:nth-child(16) {
   transform: rotate(-10deg); /* Bild 6 schräg nach links */
 }
 
-.bild:nth-child(7) {
+.bild:nth-child(17) {
   transform: rotate(15deg); /* Bild 7 schräg nach rechts */
 }
 
-.bild:nth-child(8) {
+.bild:nth-child(18) {
   transform: rotate(0deg); /* Bild 8 gerade */
 }
 
-.bild:nth-child(9) {
+.bild:nth-child(19) {
   transform: rotate(-5deg); /* Bild 9 schräg nach links */
 }
 
-.bild:nth-child(10) {
+.bild:nth-child(20) {
   transform: rotate(10deg); /* Bild 10 schräg nach rechts */
 }
-
+/* Hover-Effekt für Bilder */
+.bild:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
 /* Animation: Bilder von links nach rechts bewegen */
 @keyframes endless-scroll {
 from {
@@ -371,6 +459,8 @@ footer {
 
 body{
 background:  #f2f2f2
+
+
 }
 
 header {
