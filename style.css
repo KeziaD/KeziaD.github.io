@@ -97,11 +97,11 @@ h1 {
   bottom: 0;
   display: flex;
   align-items: flex-end;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   width: 100vw;
   height: 100vh;
+  margin: 0;
   overflow: hidden;
- margin: 0;
 }
 
 
@@ -115,13 +115,9 @@ h1 {
   margin-right: -10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-
-
-/* Hover-Effekt für Bilder */
 .bild:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1); /* Bild wird vergrößert bei Hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Schlagschatten bei Hover */
 }
 
 /* Verschiedene Ausrichtungen der Bilder */
