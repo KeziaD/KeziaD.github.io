@@ -88,20 +88,23 @@ main {
 h1 {
   font-size: 2.5rem; 
   color: #b1b1b1;
-  margin-top: 3rem;
+  margin-top: 1rem;
   margin-bottom: 20rem;
 }
 /* Bildcontainer */
 .bild-container {
-  position: absolute;
+  position: relative;
   bottom: 0;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
   width: 100vw;
   height: 100vh;
-  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 50rem;
   overflow: hidden;
+  opacity: 1; /* Bilder sind sofort sichtbar */
 }
 
 
@@ -113,6 +116,7 @@ h1 {
   position: relative;
   margin-left: -10px; /* Leichtes Überlappen */
   margin-right: -10px;
+  margin-top: 260px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .bild:hover {
@@ -150,6 +154,39 @@ h1 {
 
 .bild:nth-child(8) {
   transform: rotate(0deg); /* Bild 8 gerade */
+}
+bild:nth-child(1) {
+  transform: rotate(-10deg); /* Bild 1 schräg nach links */
+}
+
+.bild:nth-child(2) {
+  transform: rotate(15deg); /* Bild 2 schräg nach rechts */
+}
+
+.bild:nth-child(3) {
+  transform: rotate(0deg); /* Bild 3 gerade */
+}
+
+.bild:nth-child(4) {
+  transform: rotate(-5deg); /* Bild 4 schräg nach links */
+}
+
+.bild:nth-child(5) {
+  transform: rotate(10deg); /* Bild 5 schräg nach rechts */
+}
+.bild:nth-child(6) {
+  transform: rotate(-10deg); /* Bild 6 schräg nach links */
+}
+
+.bild:nth-child(7) {
+  transform: rotate(15deg); /* Bild 7 schräg nach rechts */
+}
+
+.bild:nth-child(8) {
+  transform: rotate(0deg); /* Bild 8 gerade */
+}
+.bild-container {
+  animation: none; /* Die Bilder bewegen sich kontinuierlich von rechts nach links */
 }
 
 
