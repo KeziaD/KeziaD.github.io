@@ -1,12 +1,10 @@
 body {
   background-color: #f2f2f2
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  /* display: flex; */
-  /* justify-content: center;
-  align-items: center; */
+  
+  
 }
 
 /* Grundlegende Stile */
@@ -79,7 +77,36 @@ header nav ul li a:hover, footer a:hover {
   position: relative;
   margin: 0 auto; /* Zentriert das Video */
 }
+html, body {
+  height: 100%; /* Der gesamte Bildschirm soll genutzt werden */
+  margin: 0;    /* Kein Standard-Rand */
+  padding: 0;   /* Kein Standard-Padding */
+  overflow-x: hidden; /* Verhindert horizontales Scrollen */
+  overflow-y: auto; /* Kein vertikales Scrollen */
+  
+}
+.image-container {
+  width: 100vw;
+  height: 280px; /* Gleiche Höhe wie das Banner-Video */
+  overflow: hidden; /* Sicherstellen, dass das Bild überläuft */
+  position:relative;
+  margin-right: 0;
+  margin-left: -16px;
+  top: 0;
+  left: 0;
+ 
+  
+}
 
+.image-container img {
+  width: 100%;  /* Volle Breite des Containers */
+  height: 100%; /* Volle Höhe des Containers */
+  object-fit: cover; /* Bild anpassen, damit es den gesamten Container ausfüllt */
+  display: block;
+  position: absolute; /* Sicherstellen, dass das Bild den Container füllt */
+  margin-right: 0;
+  margin-left: 0;
+}
 main {
   padding: 0rem;
   /* max-width: 1100px; */
@@ -89,30 +116,28 @@ h1 {
   font-size: 2.5rem; 
   color: #b1b1b1;
   margin-top: 1rem;
-  margin-bottom: 20rem;
+  margin-bottom: 5rem;
 }
 
 h2 {
   font-size: 2.5rem; 
-  margin-top: 1.5rem;
-  font-size: 2rem;
+  margin-top: 30px;
   margin-bottom: 20rem;
 }
 h2, h3 {
   display: block;      /* Sicherstellen, dass sie als Block-Elemente angezeigt werden */
   visibility: visible; /* Sicherstellen, dass sie sichtbar sind */
   color: #b1b1b1;         /* Textfarbe sicherstellen */
-  margin-top: 1.5rem;  /* Abstand oben, wenn nötig */
+  margin-top: 8rem;  /* Abstand oben, wenn nötig */
 }
 h3 {
   font-size: 2.5rem; 
   margin-top: 5rem;
-  font-size: 2rem;
   margin-bottom: 5rem;
 }
 
 section {
-  margin-bottom: 20rem;
+  margin-bottom: 0rem;
 }
 
 section .btn {
@@ -470,13 +495,6 @@ footer {
   background-color: #fff;
   margin-top: 20px;
 }
-
-body{
-background:  #f2f2f2
-
-
-}
-
 header {
   background-color: #b1b1b1;
   color: white;
@@ -485,8 +503,11 @@ header {
   position: fixed;
   z-index: 999;
   top: 0;
+  
 }
-
+body{
+background:  #f2f2f2
+}
 
 header nav ul {
   list-style: none;
@@ -506,7 +527,7 @@ header nav ul li a, footer a {
 }
 
 header nav ul li a:hover {
-  color: white;
+  color: #8ded9f;
  }
 
 header nav ul li a:hover, footer a:hover {
@@ -514,6 +535,23 @@ header nav ul li a:hover, footer a:hover {
   color: #ffffff; 
 }
 
+body{
+background:  #f2f2f2
+
+
+}
+
+
+
+
+/* Allgemeine Stile für den Header */
+header {
+  background-color: #b1b1b1;
+  color: white;
+  padding: 20px 0;          /* Höhe des Headers auf gleiche Höhe wie Footer setzen */
+  text-align: center;
+  width: 100%;
+}
 
 header h1 {
   font-size: 2.5em;
@@ -521,52 +559,65 @@ header h1 {
   text-align: center;
 }
 
-.about-section .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* Allgemeine Stile für den Body */
+/* Allgemeine Stile für den Body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  height: 100vh; /* Der Body muss die volle Höhe des Bildschirms einnehmen */
 }
 
-.about-info {
+/* Hintergrundbild für die gesamte Seite */
+.about-section {
+  background-image: url('dein-hintergrundbild.jpg'); /* Dein Hintergrundbild */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Der gesamte Bildschirm */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Der weiße Container, der über den gesamten Bildschirm geht */
+.about-container {
+  background-color: white;
+  width: 100%; /* Der Container füllt die gesamte Breite */
+  height: 300px; /* Höhe des Containers */
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-  gap: 40px;
-  margin: 20px
+  padding: 0 40px; /* Abstand vom Containerrand */
+  position: absolute; /* Container wird absolut positioniert */
+  top: 50%; /* Positioniert den Container in der Mitte des Bildschirms */
+  transform: translateY(-50%); /* Verschiebt den Container exakt in die Mitte */
 }
 
+/* Profilbild-Styling */
 .profile-img {
-  width: 250px;              /* Breite des Bildes */
-  height: 300px;             /* Höhe des Bildes */
-  object-fit: cover;         /* Das Bild wird so zugeschnitten, dass es den Container ausfüllt */
-  border-radius: 0%;         /* Keine abgerundeten Ecken mehr, um das Bild rechteckig zu machen */
+  width: 250px;              /* Breite des Profilbildes */
+  height: 200px;             /* Höhe des Profilbildes */
+  object-fit: cover;         /* Bild wird so angepasst, dass es den Container ausfüllt */
+  border-radius: 0%;         /* Rechteckig, keine abgerundeten Ecken */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Leichter Schatten um das Bild */
-  margin-left: 20px;         /* Verschiebt das Bild näher an den linken Rand */
-  margin-top: 80px;
+  margin-right: 40px;        /* Abstand zwischen Bild und Text */
 }
 
-.about-text h2 {
-  font-size: 2em;
-  color: #b1b1b1;
-}
-
-.about-text p {
-  font-size: 1.1em;
-  line-height: 1.6;
+/* Text-Styling mit Blocksatz */
+.about-text {
+  flex: 1;                   /* Der Text nimmt den restlichen Platz im Container ein */
+  text-align: justify;       /* Aktiviert den Blocksatz */
+  line-height: 1.6;          /* Zeilenhöhe für bessere Lesbarkeit */
   color: #666;
-  margin-top: 20px;
+  font-size: 1.2em;          /* Textgröße */
   padding: 0;
   box-sizing: border-box;
-  width: 70%; /* Containerbreite auf 80% der Seite setzen */
-  margin-right: auto; /* Zentriert den Container und fügt oben und unten einen Abstand hinzu */
-  text-align: justify; /* Aktiviert den Blocksatz */
-  position: relative; /* Ermöglicht die Verschiebung des Textes */
-  left: 0px; /* Verschiebt den Text um 150px nach links */
+  max-width: 70%;            /* Maximale Breite des Textes */
+  display: flex;
+  justify-content: center;   /* Horizontale Zentrierung des Textes */
+  align-items: center;       /* Vertikale Zentrierung des Textes */
 }
-
-
-
 /* Footer Styles */
 footer {
   background-color: #b1b1b1;
@@ -585,6 +636,8 @@ footer p {
   margin: 0;
   font-size: 0rem;
 }
+
+
 .poppins-regular {
   font-family: "Poppins", serif;
   font-weight: 400;
