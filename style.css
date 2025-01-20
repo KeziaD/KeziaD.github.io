@@ -208,6 +208,7 @@ section .btn:hover {
   overflow: hidden;
   #projects-page .bild-container img {
     opacity: 1; /* Bilder sind sofort sichtbar */
+   
 
   }
 }
@@ -249,6 +250,17 @@ header nav ul li a:hover, footer a:hover {
   text-decoration: underline;  
   color: #ffffff; 
 }
+
+.headline {
+  text-align: center;
+  color: #c0d6c1; /* Grüner Farbton */
+  font-size: 1,5em;
+  margin-top: 20px; /* Abstand zwischen Header und Überschrift */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
 #projects {
   position: relative;
   width: 100%;
@@ -260,22 +272,7 @@ header nav ul li a:hover, footer a:hover {
   padding-top: 60px; /* Abstand zwischen Header und Inhalt */
   overflow: hidden;
 }
-.headline {
-  text-align: center;
-  color: #c0d6c1; /* Grüner Farbton */
-  font-size: 1,5em;
-  margin-top: 20px; /* Abstand zwischen Header und Überschrift */
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
-}
 
-  position: relative;
-  height: 400px; /* Höhe für die Foto-Boxen */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
 
 /* Rechteckige Bilder (vertikal länger als horizontal) */
@@ -432,10 +429,34 @@ from {
   animation: endless-scroll 40s linear infinite; /* Die Bilder bewegen sich kontinuierlich von rechts nach links */
 }
 /* Styling nur für die project.html-Seite */
+.container-container-project-page  {
+  display: flex;
+  justify-content: center; /* Zentriert das Bild horizontal */
+  align-items: center; /* Zentriert das Bild vertikal */
+  margin-top: 150px; /* Fügt Abstand oben hinzu, um das Bild von der Bildreihe zu trennen */
+  margin-bottom: 0; /* Optionaler Abstand nach unten */
+  margin-right: 0;
+  margin-left: 0;
+  height: 100vh;
+  width: 100%;
 
+}
 
+.image-container-project-page {
+  width: 400px; /* Breite des Bildcontainers (kann angepasst werden) */
+  height: 400px; /* Höhe des Bildcontainers (macht das Bild quadratisch) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #2232e3; /* Optionaler Rand um das Bild */
+}
 
-
+/* Styling für das Bild selbst */
+.image-container-project-page img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Stellt sicher, dass das Bild korrekt skaliert wird, ohne seine Proportionen zu verlieren */
+}
 
 /* -------------------------------- */
 
@@ -473,28 +494,28 @@ footer {
 }
 
 
-
-/* .about-section {
-  padding: 150px 40px;
-  background-color: #fff;
-  margin-top: 3px;
+#about
+/* Allgemeine Stile für den Body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2; /* Hintergrundfarbe für den Body */
+  height: 100vh; /* Der Body muss die volle Höhe des Bildschirms einnehmen */
+  display: flex;
+  flex-direction: column;
 }
 
-
-
 /* Header Styles */
-
-/* header {
+header {
   background-color: #b1b1b1;
   color: white;
   padding: 1rem;
-  width: 100vw;
+  width: 100%; /* Header nimmt die gesamte Breite ein */
   position: fixed;
-  z-index: 999;
   top: 0;
-}
-body{
-background:  #f2f2f2
+  left: 0;
+  z-index: 1000; /* Stellt sicher, dass der Header immer oben bleibt */
 }
 
 header nav ul {
@@ -516,102 +537,51 @@ header nav ul li a, footer a {
 
 header nav ul li a:hover {
   color: #8ded9f;
- }
-
-header nav ul li a:hover, footer a:hover {
-  text-decoration: underline;  
-  color: #ffffff; 
 }
 
 header h1 {
-  font-size: 1.5em; /* Verringere die Schriftgröße, wenn nötig, damit es gut zum Header passt */
-  /* margin: 0;
+  font-size: 1.5em;
   text-align: center;
 }
-
-
-
-/* Allgemeine Stile für den Body */
-/* Allgemeine Stile für den Body */
-/* body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  height: 100vh; /* Der Body muss die volle Höhe des Bildschirms einnehmen */
-/* } */
 
 /* Hintergrundbild für die gesamte Seite */
-/* .about-section {
-  background-image: url('dein-hintergrundbild.jpg'); /* Dein Hintergrundbild */
-  /* background-size: cover;
-  background-position: center;
-  height: 100vh; /* Der gesamte Bildschirm */
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* .about-section {
+.about-section {
   position: relative;
-  background-image: url('background-image.jpg'); /* Dein Hintergrundbild */
-  /* background-size: cover; /* Bild wird auf die gesamte Breite und Höhe des Containers gestreckt */
-  /* background-position: center center;
+  background-image: 100%;
+  background-size: cover; /* Hintergrundbild passt sich der Bildschirmgröße an */
+  background-position: center;
   width: 100%;
-  height: 100vh; /* Hintergrundbild füllt den gesamten Bildschirm */
-  /* overflow: hidden; */ */
-/* } */ */ */ */ */
-
-/* Der weiße Container */
-/* .about-container { */
-  /* background-color: white;
-  width: 100vw; /* Der Container füllt die gesamte Breite */
-  /* height: 300px; /* Höhe des Containers */
-  /* display: flex; */
-  align-items: center; */
-  justify-content: center; */ */
-  padding: 0 40px; /* Abstand vom Containerrand */
-  position: absolute; /* Container wird absolut positioniert */
-  top: 50%; /* Positioniert den Container in der Mitte des Bildschirms */
-  transform: translateY(-50%); /* Verschiebt den Container exakt in die Mitte */
-  overflow: hidden; /* Verhindert, dass Inhalte außerhalb des Containers angezeigt werden */
-  left: 0; /* Verhindert, dass der Container von der linken Seite über den Bildschirmrand hinausgeht */
-  right: 0; /* Verhindert, dass der Container von der rechten Seite über den Bildschirmrand hinausgeht */
-  box-sizing: border-box; /* Sicherstellen, dass Padding in der Containerbreite enthalten ist */
+  height: 100vh; /* Hintergrundbild füllt die gesamte Bildschirmhöhe */
+  margin-top: 0; /* Kein Abstand zwischen Header und Hintergrundbild */
 }
 
-Profilbild-Styling */
-.profile-img {
-  width: 250px;              /* Breite des Profilbildes */
-  height: 200px;             /* Höhe des Profilbildes */
-  object-fit: cover;         /* Bild wird so angepasst, dass es den Container ausfüllt */
-  border-radius: 0%;         /* Rechteckig, keine abgerundeten Ecken */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Leichter Schatten um das Bild */
-  margin-right: 40px;        /* Abstand zwischen Bild und Text
-}
-
-/* Text-Styling mit Blocksatz */
-.about-text {
-  flex: 1;                   /* Der Text nimmt den restlichen Platz im Container ein */
-  text-align: justify;       /* Aktiviert den Blocksatz */
-  line-height: 1.6;          /* Zeilenhöhe für bessere Lesbarkeit */
-  color: #666;
-  font-size: 1.2em;          /* Textgröße */
-  padding: 0;
-  box-sizing: border-box;
-  max-width: 40%;            /* Maximale Breite des Textes */
+/* Container für Text und Profilbild */
+.about-container {
+  background-color: white;
+  width: 100%; /* Breite auf 100% setzen */
+  height: 400px; /* Höhe des Containers angepasst, damit er kleiner als das Hintergrundbild ist */
   display: flex;
-  justify-content: center;   /* Horizontale Zentrierung des Textes */
-  align-items: center;       /* Vertikale Zentrierung des Textes */
-  text-align: center;
+  align-items: center; /* Vertikale Zentrierung */
+  justify-content: flex-start; /* Startet den Inhalt links */
+  position: absolute;
+  top: 0; /* Direkt auf dem Hintergrundbild ohne Abstand */
+  padding: 0 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 1; /* Sicherstellen, dass der Container vor dem Hintergrundbild liegt */
 }
 
+
+  
 /* Footer Styles */
 footer {
   background-color: #b1b1b1;
   color: white;
   padding: 20px 0;
   text-align: center;
+  position: relative;
+  width: 100%; /* Footer nimmt die gesamte Breite ein */
+  bottom: 0;
 }
 
 footer .container {
@@ -622,158 +592,18 @@ footer .container {
 
 footer p {
   margin: 0;
-  font-size: 0rem;
+  font-size: 1rem;
 }
 
 .poppins-regular {
   font-family: "Poppins", serif;
   font-weight: 400;
   font-style: normal;
-} */ */
- */
-
-
-/* Allgemeine Reset-Stile */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-/* Body-Styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  color: #333;
-}
 
-/* Header-Stile */
-header {
-  background-color: #b1b1b1;
-  color: white;
-  padding: 1rem; /* Gleiche Höhe wie Footer */
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
 
-header .container {
-  max-width: 1200px; /* Maximale Breite für den Inhalt */
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-header h1 {
-  font-size: 2rem;
-  text-align: left;
-}
-
-header nav ul {
-  list-style: none;
-  display: flex;
-}
-
-header nav ul li {
-  margin: 0 15px;
-}
-
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-header nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Main-Content (About Section) */
-main {
-  margin-top: 8rem; /* Platz für den fixierten Header */
-  position: relative;
-}
-
-/* Hintergrundbild für die About-Seite */
-.background_picture {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Hintergrundbild nimmt die volle Bildschirmhöhe */
-  background-image: url('background_about.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-/* Weißer Textcontainer auf dem Hintergrundbild */
-.about1-text-container {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  max-width: 100%; /* Container füllt die volle Breite */
-  width: 100%;
-  height: 8cm; /* Feste Höhe des Containers */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-.about1-text-container h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.about1-text-container p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  text-align: justify;
-  color: #ffffff;
-  max-width: 50%; /* Text nimmt maximal 70% der Containerbreite ein */
-  margin: 0 auto;
-}
-
-/* Profilbild-Stile */
-.profile-img {
-  width: 250px;
-  height: 200px;
-  object-fit: cover;
-  margin-right: 20px;
-  border-radius: 0%; /* Rechteckiges Bild */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer-Stile */
-footer {
-  background-color: #b1b1b1;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-  width: 100%;
-}
-
-footer .footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
 
 /* Responsives Design */
 @media (max-width: 768px) {
@@ -792,5 +622,143 @@ footer a:hover {
   .about1-text-container p {
     width: 100%; /* Textcontainer nimmt 100% der Breite auf kleineren Bildschirmen */
     text-align: center;
+  }
+}
+
+#contact {
+  width: 100%;
+  max-width: 700px; /* Maximale Breite des Formulars */
+  margin: 90px auto; /* Zentriert das Formular auf der Seite mit etwas Abstand oben */
+  padding: 70px;
+  background-color: #ffffff; /* Weißer Hintergrund für das Formular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Weicher Schatten für den Formularbereich */
+  border-radius: 8px; /* Abgerundete Ecken */
+}
+header {
+  background-color: #b1b1b1;
+  color: white;
+  padding: 1rem;  /* Höhe des Headers mit 1rem Padding (kann bei Bedarf angepasst werden) */
+  width: 100%;    /* Der Header füllt die gesamte Bildschirmbreite */
+  position: fixed;  /* Der Header bleibt immer oben fixiert */
+  z-index: 999;    /* Sicherstellen, dass der Header immer im Vordergrund bleibt */
+  top: 0;
+}
+
+/* Navigation innerhalb des Headers */
+header nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;  /* Zentriert die Navigation horizontal */
+}
+
+header nav ul li {
+  margin: 0 20px;  /* Abstand zwischen den Listenelementen */
+}
+
+/* Links im Header */
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+header nav ul li a:hover {
+  color: white;
+  text-decoration: underline;  /* Unterstreichung beim Hover */
+}
+
+header nav ul li a:hover, footer a:hover {
+  color: #ffffff; 
+}
+
+/* Footer Styles */
+footer {
+  background-color: #b1b1b1;
+  color: white;
+  padding: 10px 0; /* Gleiche Höhe wie der Header */
+  text-align: center;
+}
+
+
+
+/* Überschrift des Formulars */
+h1 {
+  text-align: center; /* Zentriert die Überschrift */
+  color: #a5a5a5; /* Grüner Farbton für die Überschrift */
+  font-size: 2.2em; /* Größere Schrift für den Titel */
+  margin-bottom: 30px; /* Abstand unter der Überschrift */
+}
+
+/* Label für die Formulareingabefelder */
+label {
+  font-size: 16px;
+  color: #555; /* Helles Grau für die Labels */
+  margin-bottom: 8px; /* Etwas Abstand nach unten */
+  display: block; /* Blockdarstellung für Labels */
+}
+
+/* Allgemeine Formulareingabefelder (input und textarea) */
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 20px 0; /* Abstand nach oben, unten und zwischen den Feldern */
+  border: 1px solid #ddd; /* Helle Grenze */
+  border-radius: 5px; /* Abgerundete Ecken */
+  font-size: 16px;
+  box-sizing: border-box; /* Stellt sicher, dass Padding und Border in der Breite enthalten sind */
+}
+
+/* Fokussierung auf Eingabefelder (input, textarea) */
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+  border-color: #4CAF50; /* Grüne Grenze, wenn das Feld fokussiert ist */
+  outline: none; /* Entfernt den Standardrahmen */
+}
+
+/* Styling für das Textarea-Feld */
+textarea {
+  resize: vertical; /* Ermöglicht das Vergrößern des Textfelds in der Höhe */
+  min-height: 150px; /* Mindesthöhe für das Textarea */
+}
+
+/* Styling für den Absenden-Button */
+button {
+  width: 100%; /* Button auf volle Breite setzen */
+  padding: 14px;
+  background-color: #4CAF50; /* Grüner Hintergrund */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer; /* Zeiger-Cursor zeigt an, dass der Button klickbar ist */
+  transition: background-color 0.3s ease; /* Sanfte Farbänderung bei Hover */
+}
+
+button:hover {
+  background-color: #dc79bd; /* Etwas dunkleres Grün bei Hover */
+}
+
+/* Styling für ungültige Felder */
+input:invalid, textarea:invalid {
+  border-color: #66c8f6; /* Rote Grenze für ungültige Felder */
+}
+
+input:valid, textarea:valid {
+  border-color: #2ecc71; /* Grüne Grenze für gültige Felder */
+}
+
+/* Responsives Design */
+@media (max-width: 768px) {
+  #contact {
+      margin: 20px; /* Weniger Abstand auf mobilen Geräten */
+      padding: 15px;
+  }
+
+  h1 {
+      font-size: 1.8em; /* Kleinere Schriftgröße für den Titel auf kleineren Bildschirmen */
+  }
+
+  input[type="text"], input[type="email"], textarea, button {
+      font-size: 14px; /* Kleinere Schriftgröße für Eingabefelder und Button */
   }
 }
