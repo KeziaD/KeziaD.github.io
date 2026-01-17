@@ -1,5 +1,5 @@
 body {
-  background-color: #f2f2f2
+  background-color: #F6F4F1
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -102,21 +102,23 @@ html, body {
   position:relative;
   margin-right: 0;
   margin-left: -16px;
+  margin-bottom: 15px;
   top: 0;
   left: 0;
  
   
 }
-
 .image-container img {
   width: 100%;  /* Volle Breite des Containers */
   height: 100%; /* Volle Höhe des Containers */
-  object-fit: cover; /* Bild anpassen, damit es den gesamten Container ausfüllt */
+  object-fit: contain; /* Bild vollständig anzeigen, ohne Kanten abzuschneiden */
   display: block;
   position: absolute; /* Sicherstellen, dass das Bild den Container füllt */
   margin-right: 0;
   margin-left: 0;
 }
+
+
 main {
   padding: 0rem;
   /* max-width: 1100px; */
@@ -131,8 +133,9 @@ h1 {
 
 h2 {
   font-size: 2.5rem; 
-  margin-top: 30px;
-  margin-bottom: 20rem;
+  margin-top: 0px;
+  margin-bottom: 50px;
+
 
   p {
     color: #ff69b4; /* Helles Pink */
@@ -146,8 +149,29 @@ h2 {
 h2, h3 {
   display: block;      /* Sicherstellen, dass sie als Block-Elemente angezeigt werden */
   visibility: visible; /* Sicherstellen, dass sie sichtbar sind */
-  color: #b1b1b1;         /* Textfarbe sicherstellen */
-  margin-top: 8rem;  /* Abstand oben, wenn nötig */
+  color:  #c0d6c1;         /* Textfarbe sicherstellen */
+  margin-top: 1rem;  /* Abstand oben, wenn nötig */
+
+}
+.image-container {
+  width: 100vw;
+  height: 500px; /* Gleiche Höhe wie das Banner-Video */
+  overflow: hidden; /* Sicherstellen, dass das Bild überläuft */
+  position:relative;
+  margin-right: 0;
+  margin-left: -16px;
+  margin-bottom: 15px;
+  top: 0;
+  left: 0;
+}
+.image-container img {
+  width: 100%;  /* Volle Breite des Containers */
+  height: 100%; /* Volle Höhe des Containers */
+  object-fit: cover; /* Bild anpassen, damit es den gesamten Container ausfüllt */
+  display: block;
+  position: absolute; /* Sicherstellen, dass das Bild den Container füllt */
+  margin-right: 0;
+  margin-left: 0;
 }
 h3 {
   font-size: 2.5rem; 
@@ -163,14 +187,14 @@ section .btn {
   display: inline-block;
   margin-top: 1rem;
   padding: 10px 20px;
-  background-color: #ed38a5;
+  background-color: #c0d6c1;;
   color: white;
   text-decoration: none;
   border-radius: 5px;
 }
 
 section .btn:hover {
-  background-color: #ed38a5;
+  background-color: #c0d6c1;;
 }
 
 .hero {
@@ -205,7 +229,7 @@ section .btn:hover {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  overflow: hidden;
+  
   #projects-page .bild-container img {
     opacity: 1; /* Bilder sind sofort sichtbar */
    
@@ -222,7 +246,7 @@ header {
   top: 0;
 }
 body{
-background:  #f2f2f2
+background:  #F6F4F1
 }
 
 header nav ul {
@@ -256,6 +280,7 @@ header nav ul li a:hover, footer a:hover {
   color: #c0d6c1; /* Grüner Farbton */
   font-size: 1,5em;
   margin-top: 20px; /* Abstand zwischen Header und Überschrift */
+  margin-bottom: 660px; /* so bleibt der header am Bildschirmrand kleben */
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
@@ -500,8 +525,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2; /* Hintergrundfarbe für den Body */
+  background-color: #F6F4F1; /* Hintergrundfarbe für den Body */
   height: 100vh; /* Der Body muss die volle Höhe des Bildschirms einnehmen */
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -544,32 +570,62 @@ header h1 {
   text-align: center;
 }
 
-/* Hintergrundbild für die gesamte Seite */
+
+/* Weißer horizontaler Block */
 .about-section {
   position: relative;
-  background-image: 100%;
-  background-size: cover; /* Hintergrundbild passt sich der Bildschirmgröße an */
-  background-position: center;
   width: 100%;
-  height: 100vh; /* Hintergrundbild füllt die gesamte Bildschirmhöhe */
-  margin-top: 0; /* Kein Abstand zwischen Header und Hintergrundbild */
+  height: 100vh; /* Höhe des Blocks in cm */
+  background-color: white;
+  display: flex;
+  align-items: center; /* Vertikale Zentrierung des Inhalts im Block */
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin-top: 0px; /* Abstand von 5 cm zum Header */
+  margin-bottom: 0px;
 }
 
-/* Container für Text und Profilbild */
-.about-container {
-  background-color: white;
-  width: 100%; /* Breite auf 100% setzen */
-  height: 400px; /* Höhe des Containers angepasst, damit er kleiner als das Hintergrundbild ist */
-  display: flex;
-  align-items: center; /* Vertikale Zentrierung */
-  justify-content: flex-start; /* Startet den Inhalt links */
-  position: absolute;
-  top: 0; /* Direkt auf dem Hintergrundbild ohne Abstand */
-  padding: 0 40px;
-  box-sizing: border-box;
-  overflow: hidden;
-  z-index: 1; /* Sicherstellen, dass der Container vor dem Hintergrundbild liegt */
+  .image-container {
+  position: absolute; /* Absolut positioniert, um die ganze Seite zu füllen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Verhindert, dass das Bild über den Container hinausragt */
 }
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Bild anpassen, um den gesamten Container auszufüllen */
+  display: block;
+}
+
+.image-container {
+  width: 100vw;
+  height: 850px; /* Gleiche Höhe wie das Banner-Video */
+  overflow: hidden; /* Sicherstellen, dass das Bild überläuft */
+  position:relative;
+  margin-right: 0;
+  margin-left: -20px;
+  margin-bottom: 15px;
+  top: 0;
+  left: 0;
+ 
+  
+}
+.image-container img {
+  width: 100%;  /* Volle Breite des Containers */
+  height: 100%; /* Volle Höhe des Containers */
+  object-fit: cover; /* Bild anpassen, damit es den gesamten Container ausfüllt */
+  display: block;
+  position: absolute; /* Sicherstellen, dass das Bild den Container füllt */
+  margin-right: 0;
+  margin-left: 0;
+}
+
+
+
 
 
   
@@ -582,6 +638,7 @@ footer {
   position: relative;
   width: 100%; /* Footer nimmt die gesamte Breite ein */
   bottom: 0;
+  margin-top: auto;
 }
 
 footer .container {
@@ -685,7 +742,7 @@ footer {
 /* Überschrift des Formulars */
 h1 {
   text-align: center; /* Zentriert die Überschrift */
-  color: #a5a5a5; /* Grüner Farbton für die Überschrift */
+  color: #c0d6c1;; /* Grüner Farbton für die Überschrift */
   font-size: 2.2em; /* Größere Schrift für den Titel */
   margin-bottom: 30px; /* Abstand unter der Überschrift */
 }
@@ -725,7 +782,7 @@ textarea {
 button {
   width: 100%; /* Button auf volle Breite setzen */
   padding: 14px;
-  background-color: #4CAF50; /* Grüner Hintergrund */
+  background-color: #c0d6c1; /* Grüner Hintergrund */
   color: white;
   border: none;
   border-radius: 5px;
@@ -740,7 +797,7 @@ button:hover {
 
 /* Styling für ungültige Felder */
 input:invalid, textarea:invalid {
-  border-color: #66c8f6; /* Rote Grenze für ungültige Felder */
+  border-color:#c0d6c1;; /* Rote Grenze für ungültige Felder */
 }
 
 input:valid, textarea:valid {
