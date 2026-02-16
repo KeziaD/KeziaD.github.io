@@ -1,5 +1,5 @@
 body {
-  background-color: #F6F4F1
+  background-color: #F6F4F1;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -61,8 +61,6 @@ footer {
   padding: 10px 0; /* Gleiche Höhe wie der Header */
   text-align: center;
 }
-
-
 
 .banner {
   width: 100%;
@@ -150,26 +148,6 @@ h2, h3 {
   margin-top: 1rem;  /* Abstand oben, wenn nötig */
 
 }
-.image-container {
-  width: 100vw;
-  height: 500px; /* Gleiche Höhe wie das Banner-Video */
-  overflow: hidden; /* Sicherstellen, dass das Bild überläuft */
-  position:relative;
-  margin-right: 0;
-  margin-left: -16px;
-  margin-bottom: 15px;
-  top: 0;
-  left: 0;
-}
-.image-container img {
-  width: 100%;  /* Volle Breite des Containers */
-  height: 100%; /* Volle Höhe des Containers */
-  object-fit: cover; /* Bild anpassen, damit es den gesamten Container ausfüllt */
-  display: block;
-  position: absolute; /* Sicherstellen, dass das Bild den Container füllt */
-  margin-right: 0;
-  margin-left: 0;
-}
 h3 {
   font-size: 2.5rem; 
   margin-top: 5rem;
@@ -242,8 +220,8 @@ header {
   z-index: 999;
   top: 0;
 }
-body{
-background:  #F6F4F1
+body {
+  background-color: #F6F4F1;
 }
 
 header nav ul {
@@ -516,7 +494,6 @@ footer {
 }
 
 
-#about
 /* Allgemeine Stile für den Body */
 body {
   margin: 0;
@@ -598,28 +575,7 @@ header h1 {
   display: block;
 }
 
-.image-container {
-  width: 100vw;
-  height: 850px; /* Gleiche Höhe wie das Banner-Video */
-  overflow: hidden; /* Sicherstellen, dass das Bild überläuft */
-  position:relative;
-  margin-right: 0;
-  margin-left: -20px;
-  margin-bottom: 15px;
-  top: 0;
-  left: 0;
- 
-  
-}
-.image-container img {
-  width: 100%;  /* Volle Breite des Containers */
-  height: 100%; /* Volle Höhe des Containers */
-  object-fit: cover; /* Bild anpassen, damit es den gesamten Container ausfüllt */
-  display: block;
-  position: absolute; /* Sicherstellen, dass das Bild den Container füllt */
-  margin-right: 0;
-  margin-left: 0;
-}
+
 
 
 
