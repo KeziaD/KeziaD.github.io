@@ -99,18 +99,21 @@ html, body {
   width: 100vw;
   height: 280px; /* Gleiche Höhe wie das Banner-Video */
   overflow: hidden; /* Sicherstellen, dass das Bild überläuft */
-  position: relative;
+  position:relative;
   margin-right: 0;
   margin-left: -16px;
   margin-bottom: 15px;
   top: 0;
   left: 0;
+ 
+  
 }
 .image-container img {
   width: 100%;  /* Volle Breite des Containers */
   height: 100%; /* Volle Höhe des Containers */
   object-fit: contain; /* Bild vollständig anzeigen, ohne Kanten abzuschneiden */
   display: block;
+  position: absolute; /* Sicherstellen, dass das Bild den Container füllt */
   margin-right: 0;
   margin-left: 0;
 }
