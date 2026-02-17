@@ -559,22 +559,32 @@ header h1 {
   margin-bottom: 0px;
 }
 
-.image-container {
-  width: 100vw;
-  height: 280px; /* Gleiche Höhe wie das Banner-Video */
-  overflow: hidden; /* Sicherstellen, dass das Bild überläuft */
-  position: relative;
-  margin-right: 0;
-  margin-left: -16px;
-  margin-bottom: 15px;
+  .image-container {
+  position: absolute; /* Absolut positioniert, um die ganze Seite zu füllen */
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Verhindert, dass das Bild über den Container hinausragt */
 }
 
 .image-container img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Bild vollständig anzeigen, ohne Kanten abzuschneiden */
+  object-fit: cover; /* Bild anpassen, um den gesamten Container auszufüllen */
+  display: block;
+}
+
+
+
+
+
+
+
+  
+/* Footer Styles */
+footer {
+  background-color: #b1b1b1;
   color: white;
   padding: 20px 0;
   text-align: center;
