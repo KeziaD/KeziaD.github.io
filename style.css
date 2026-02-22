@@ -132,7 +132,7 @@ h1 {
 }
 
 h2 {
-  font-size: 4.5rem; 
+  font-size: 2.5rem; 
   margin-top: 0px;
   margin-bottom: 50px;
 
@@ -154,13 +154,14 @@ h2, h3 {
 
 }
 .image-container {
-  width: 100vw;
-  height: 500px; /* Gleiche Höhe wie das Banner-Video */
+  width: 100vw
+  height: 280px; /* Gleiche Höhe wie das Banner-Video */
   overflow: hidden; /* Sicherstellen, dass das Bild überläuft */
-  position:relative;
+  position:absolute;
+  display: block
   margin-right: 0;
-  margin-left: -16px;
-  margin-bottom: 15px;
+  margin-left: -0px;
+  margin-bottom: 0px;
   top: 0;
   left: 0;
 }
