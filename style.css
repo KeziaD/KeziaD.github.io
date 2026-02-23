@@ -100,9 +100,9 @@ html, body {
   height: 280px; /* Gleiche Höhe wie das Banner-Video */
   overflow: hidden; /* Sicherstellen, dass das Bild überläuft */
   position:relative;
-  margin-right: 0;
-  margin-left: -16px;
-  margin-bottom: 15px;
+  margin-right: 3000px;
+  margin-left: 3000px
+  margin-bottom: 0%;
   top: 0;
   left: 0;
  
@@ -150,7 +150,7 @@ h2, h3 {
   display: block;      /* Sicherstellen, dass sie als Block-Elemente angezeigt werden */
   visibility: visible; /* Sicherstellen, dass sie sichtbar sind */
   color:  #c0d6c1;         /* Textfarbe sicherstellen */
-  margin-top: 1rem;  /* Abstand oben, wenn nötig */
+  margin-top: 0rem;  /* Abstand oben, wenn nötig */
 
 }
 .image-container {
@@ -279,7 +279,7 @@ header nav ul li a:hover, footer a:hover {
 .headline {
   text-align: center;
   color: #c0d6c1; /* Grüner Farbton */
-  font-size: 1,5em;
+  font-size: 2.5em;
   margin-top: 20px; /* Abstand zwischen Header und Überschrift */
   margin-bottom: 660px; /* so bleibt der header am Bildschirmrand kleben */
   text-transform: uppercase;
